@@ -31,7 +31,7 @@ function ValidacaoUsuario(inputName, inputLastName, inputEmail, inputPass, confi
     }
   });
 
-      inputLastName.addEventListener("keyup",()=>{
+    inputLastName.addEventListener("keyup",()=>{
 
     if(inputLastName.value.length <5){
         inputLastName.setAttribute("style", "color:#00CC00");
@@ -41,7 +41,7 @@ function ValidacaoUsuario(inputName, inputLastName, inputEmail, inputPass, confi
     }
   });
 
-  inputinputEmail.addEventListener("keyup",()=>{
+    inputEmail.addEventListener("keyup",()=>{
 
     if(inputEmail.value.length <10){
         inputEmail.setAttribute("style", "color:#00CC00");
@@ -50,5 +50,7 @@ function ValidacaoUsuario(inputName, inputLastName, inputEmail, inputPass, confi
         inputEmail.setAttribute("style", "color:#990000")
     }
   });
+
+
 
 
