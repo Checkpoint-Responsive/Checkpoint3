@@ -10,7 +10,14 @@
 </head>
 <body>
 
-        <h1>Formulário de acesso</h1>
+        <h1>Formulário de cadastro</h1>
+
+        <div>
+            <button>Dark mode</button>
+        </div>
+        
+        <p></p>
+
     <div>
         <form name="frm01" method="get">
 
@@ -23,27 +30,36 @@
                 <div>
                     <label for="IdNm">Primeiro nome:</label>
                     <input type="text" name="txtNm" id="idNm" placeholder="Nome">
+                    <h5>Validação: Mínimo de 5 caracteres digitados. <p></p>(este campo não pode estar vazio).</h5>
                 </div>
 
                 <div>
                     <label for="idSegundoNm">Segundo nome:</label>
                     <input type="text" name="txtSegundoNm" id="idSegundoNm" placeholder="Sobrenome">
+                    <H5>Validação: Mínimo de 5 caracteres digitados. <p></p>
+                        (este campo não pode estar vazio).</H5>
                 </div>
 
                 <div>
                     <label for="idEmail">Email:</label>
                     <input type="text" name="txtEmail" id="idEmail" placeholder="Email">
+                    <H5>Validação: Mínimo de 5 caracteres digitados e uso do "@" obrigatório. <p></p>
+                        (este campo não pode estar vazio).</H5>
                 </div>
 
                 <div>
                     <label for="idPass">Senha:</label>
                     <input type="password" name="txtPass" id="idPass" placeholder="Senha">
+                    <H5>Validação: Mínimo de 6 e máximo de 8 caracteres digitados. <p></p>(este campo não pode estar vazio).</H5>
                 </div>
                 
                 <div>
                     <label for="idConfirmarPass">Confirmar senha:</label>
                     <input type="password" name="txtConfirmarPass" id="idConfirmarPass" placeholder="Senha">
+                    <h5>Validação: Comparar com a senha para garantir que seja igual.</h5>
                 </div>
+
+                <p></p>
 
                 <div>
                     <button type="submit" id="btnSubmit">Continuar</button>
