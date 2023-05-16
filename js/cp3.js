@@ -22,29 +22,38 @@ let isEmailValid;
 let isPasswordValidated = false;
 let isConfirmPasswordValidated = false;
 
-function tryValidate(){
-    try{
-        if(nameValidation() === false){ 
-            throw new Error("O Nome está invalido.");
-        }
-        if(lastNameValidation() === false){
-            throw new Error("O ultimo nome está Inválido.");
-        }
-        if(emailValidation() === false){
-            throw new Error("O Email está inválido.");
-        } 
-        if(passwordValidation() === false){
-            throw new Error("A senha está Inválida.");
-        }
-        if(confirmPasswordValidation() === false){
-            throw new Error("A confirmação de senha está inválida.");
-        }
+function tryValidate() {
+    const errorMessages = [];
+  
+    nameValidation();
+    lastNameValidation();
+    emailValidation();
+    passwordValidation();
+    confirmPasswordValidation();
+  
+    if (!isNameValidated) {
+      errorMessages.push("O Nome está inválido.");
     }
-
-    catch(err){
-        alert(err.message)
+    if (!isLastNameValidated) {
+      errorMessages.push("O último nome está inválido.");
     }
-}
+    if (!isEmailValidated) {
+      errorMessages.push("O Email está inválido.");
+    }
+    if (!isPasswordValidated) {
+      errorMessages.push("A senha está inválida.");
+    }
+    if (!isConfirmPasswordValidated) {
+      errorMessages.push("A confirmação de senha está inválida.");
+    }
+  
+    if (errorMessages.length === 0) {
+      alert("Formulário válido. Submissão permitida.");
+    } else {
+      const errorMessage = errorMessages.join("\n");
+      alert(errorMessage);
+    }
+  }
 
 function nameValidation(){
 
@@ -118,7 +127,4 @@ function confirmPasswordValidation(){
 
 inputConfirmPassword.addEventListener("keyup", () => confirmPasswordValidation());
 
-submitButton.addEventListener("click", (event) => {
-    event.preventDefault();
-    tryValidate();
-});
+submitButton.addEventListener("click", tryValidate);
