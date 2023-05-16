@@ -20,46 +20,51 @@ function ValidacaoUsuario(inputName, inputLastName, inputEmail, inputPass, confi
 
     const labelName = document.querySelector("label[for='idNm']")
     const labelLastName = document.querySelector("label[for='idSegundoNm']")
+    const labelEmail = document.querySelector("label[for='idEmail']")
+    const labelPass = document.querySelector("label[for='idPass']")
+    const labelconfirmPass = document.querySelector("label[for='idConfirmPass]'")
 
     inputName.addEventListener("keyup",()=>{
 
-    if(inputName.value.length <5){
-        labelName.setAttribute("style", "color:#00CC00");
+    if(inputName.value.length >= 5){
+        inputName.setAttribute("style", "color:#00CC00");
     }
     else{
-        labelName.setAttribute("style", "color:#990000")
+        inputName.setAttribute("style", "color:#990000")
     }
   });
 
-    inputLastName.addEventListener("keyup",()=>{
+    labelLastName.addEventListener("keyup",()=>{
 
-    if(inputLastName.value.length <5){
-        inputLastName.setAttribute("style", "color:#00CC00");
+    if(labelLastName.value.length >= 5){
+        labelLastName.setAttribute("style", "color:#00CC00");
     }
     else{
-        inputLastName.setAttribute("style", "color:#990000")
+        labelLastName.setAttribute("style", "color:#990000")
     }
   });
 
-    inputEmail.addEventListener("keyup",()=>{
+    labelEmail.addEventListener("keyup",()=>{
 
-    if(inputEmail.value.length <6){
+    if(inputEmail.value.length >= 5){
         inputEmail.setAttribute("style", "color:#00CC00");
+    }else if(labelEmail.value.length == 0){
+        alert('Email está em branco')
     }
     else{
         inputEmail.setAttribute("style", "color:#990000")
     }
   });
 
-    inputPass.addEventListener("keyup",()=>{
+    labelPass.addEventListener("keyup",()=>{
 
-    if(inputPass.value.length <6){
-        inputPass.setAttribute("style", "color:#00CC00");
-    } else if(inputPass.value.length > 8){
+    if(labelPass.value.length >= 5){
+        labelPass.setAttribute("style", "color:#00CC00");
+    } else if(labelPass.value.length <= 8){
         alert('Senha inválida, exedeu a quantidade caracteres')
     }
     else{
-        inputPass.setAttribute("style", "color:#990000")
+        labelPass.setAttribute("style", "color:#990000")
     }
   });
 
