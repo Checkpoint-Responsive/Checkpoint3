@@ -20,3 +20,13 @@ function ValidacaoUsuario(inputName, inputLastName, inputEmail, inputPass, confi
 
     const labelName = document.querySelector("label[for='idNm']")
     const labelLastName = document.querySelector("label[for='idSegundoNm']")
+
+    inputName.addEventListener("keyup",()=>{
+
+    if(inputName.value.length <5){
+        labelName.setAttribute("style", "color:#00CC00");
+    }
+    else{
+        labelName.setAttribute("style", "color:#990000")
+    }
+  });
