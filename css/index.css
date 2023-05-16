@@ -15,6 +15,17 @@ body{
     background: var(--background-color);
 }
 
+h1{
+    text-align: center;
+
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    color: #e4e8e9;
+
+    margin-bottom: -15rem;
+}
+
 .hero{
         display: flex;
         justify-content: center;
@@ -25,13 +36,18 @@ body{
 .hero form{
 
     background: var(--modal-color);
-    width: 428px;
-    height: 440px;
-    align-items: flex-start;
-    padding: 48px 64px 64px;
-    gap: 32px;
+    width: 42.8rem;
+    height: 44rem;
+
+    padding: 4.8rem 6.4rem 6.4rem;
+
 
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 6px;
 
+}
+
+.hero form fieldset{
+    align-items: flex-start;
+    gap: 3.2rem
 }
