@@ -5,3 +5,9 @@ function ValidacaoUsuario(inputName, inputLastName, inputEmail, inputPass, confi
     console.log(inputPass);
     console.log(confirmPass);
 }
+
+if(inputName.value != "" && inputLastName.value != "" && inputEmail.value != "" && inputPass.value != "" && confirmPass != "") {
+    return true;
+}else{
+    return false;
+}
