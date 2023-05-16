@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="./js/cp3.js" defer></script>
+    <title>Formulário de acesso</title>
+</head>
+<body>
+
+        <h1>Formulário de acesso</h1>
+    <div>
+        <form name="frm01" method="get">
+
+            <input type="hidden" name="txtOculto" value="ValorOculto">
+
+            <fieldset>
+
+                <legend>Entrar</legend>
+
+                <div>
+                    <label for="IdNm">Primeiro nome:</label>
+                    <input type="text" name="txtNm" id="idNm" placeholder="Nome">
+                </div>
+
+                <div>
+                    <label for="idSegundoNm">Segundo nome:</label>
+                    <input type="text" name="txtSegundoNm" id="idSegundoNm" placeholder="Sobrenome">
+                </div>
+
+                <div>
+                    <label for="idEmail">Email:</label>
+                    <input type="text" name="txtEmail" id="idEmail" placeholder="Email">
+                </div>
+
+                <div>
+                    <label for="idPass">Senha:</label>
+                    <input type="password" name="txtPass" id="idPass" placeholder="Senha">
+                </div>
+                
+                <div>
+                    <label for="idConfirmarPass">Confirmar senha:</label>
+                    <input type="password" name="txtConfirmarPass" id="idConfirmarPass" placeholder="Senha">
+                </div>
+
+                <div>
+                    <button type="submit" id="btnSubmit">Continuar</button>
+                    <button type="reset" id="btnLimpar">Limpar</button>
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
