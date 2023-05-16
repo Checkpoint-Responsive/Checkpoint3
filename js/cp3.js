@@ -12,63 +12,91 @@ function ValidacaoUsuario(inputName, inputLastName, inputEmail, inputPass, confi
     }
 }
 
-    const inputName = document.querySelector('#idNm');
-    const inputLastName = document.querySelector('#idSegundoNm')
+    const inputName = document.querySelector('#idName');
+    const inputLastName = document.querySelector('#idLastName')
     const inputEmail = document.querySelector('#idEmail')
-    const inputPass = document.querySelector('#idPass')
-    const confirmPass = document.querySelector('#idConfirmarPass')
+    const inputPass = document.querySelector('#idPassord')
+    const confirmPass = document.querySelector('#idConfirmPassord')
 
-    const labelName = document.querySelector("label[for='idNm']")
-    const labelLastName = document.querySelector("label[for='idSegundoNm']")
+    const labelName = document.querySelector("label[for='idName']")
+    const labelLastName = document.querySelector("label[for='idLastName']")
     const labelEmail = document.querySelector("label[for='idEmail']")
-    const labelPass = document.querySelector("label[for='idPass']")
-    const labelconfirmPass = document.querySelector("label[for='idConfirmPass]'")
+    const labelPassword = document.querySelector("label[for='idPassword']")
+    const labelConfirmPassword= document.querySelector("label[for='idConfirmPassword']")
 
-    inputName.addEventListener("keyup",()=>{
+    const submitButton = document.getElementById("btnSubmit")
 
-    if(inputName.value.length >= 5){
-        inputName.setAttribute("style", "color:#00CC00");
+    const greenColor = "color:#00CC00"
+    const redColor = "color:#990000"
+
+    let isNameValidated = false;
+    let isEmailValid = 0
+
+    function tryValidate(nameValidation, lastNameValidatioon, emailValidation, passwordValidation, confirmPasswordValidation){
+        try{
+            if(nameValidation === false){ 
+                throw new Error("O Nome está invalido.")
+            }
+            if(lastNameValidatioon === false){
+                throw new Error("O ultimo nome está Inválido.")
+            }
+            if(emailValidation === false){
+                throw new Error("O Email está inválido.")
+            } 
+            if(passwordValidation === false){
+                throw new Error("A senha está Inválida.")
+            }
+            if(confirmPasswordValidation === false){
+                throw new Error("A confirmação de senha está inválida.")
+            }
+        }
+
+        catch(err){
+            alert(err.message)
+        }
     }
-    else{
-        inputName.setAttribute("style", "color:#990000")
-    }
-  });
 
-    labelLastName.addEventListener("keyup",()=>{
-
-    if(labelLastName.value.length >= 5){
-        labelLastName.setAttribute("style", "color:#00CC00");
+    function nameValidation(){
+        if(inputName.value.length >=5){
+            labelName.setAttribute("style", String(greenColor));
+            isNameValidated = true
+        }
+        else {
+            labelName.setAttribute("style", String(redColor))
+        }
     }
-    else{
-        labelLastName.setAttribute("style", "color:#990000")
-    }
-  });
+    inputName.addEventListener("keyup", () => nameValidation());
 
-    labelEmail.addEventListener("keyup",()=>{
-
-    if(inputEmail.value.length >= 5){
-        inputEmail.setAttribute("style", "color:#00CC00");
-    }else if(labelEmail.value.length == 0){
-        alert('Email está em branco')
+    function lastNameValidation(){
+        if(inputLastName.value.length >=5){
+            labelLastName.setAttribute("style", String(greenColor));
+            isLastNameValidated = true
+        }
+        else {
+            labelLastName.setAttribute("style", String(redColor))
+        }
     }
-    else{
-        inputEmail.setAttribute("style", "color:#990000")
-    }
-  });
 
-    labelPass.addEventListener("keyup",()=>{
+    function emailValidation(){
 
-    if(labelPass.value.length >= 5){
-        labelPass.setAttribute("style", "color:#00CC00");
-    } else if(labelPass.value.length <= 8){
-        alert('Senha inválida, exedeu a quantidade caracteres')
+        isEmailValid = inputEmail.includes("@")
+    
+        if (isEmailValid === true){
+            labelEmail.setAttribute("style", String(greenColor))
+        }
+        else{
+             labelName.setAttribute("style", String(redColor))
+        }
     }
-    else{
-        labelPass.setAttribute("style", "color:#990000")
-    }
-  });
+    
+    inputEmail.addEventListener("keyup", () => emailValidation());
 
-      
+
+    
+submitButton.addEventListener("click",() => tryValidate())
+
+
+
 
 
 
