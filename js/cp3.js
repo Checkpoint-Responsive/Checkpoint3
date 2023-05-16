@@ -17,3 +17,5 @@ function ValidacaoUsuario(inputName, inputLastName, inputEmail, inputPass, confi
     const inputEmail = document.querySelector('#idEmail')
     const inputPass = document.querySelector('#idPass')
     const confirmPass = document.querySelector('#idConfirmarPass')
+
+    const labelName = document.querySelector("label[for='idNm']")
