@@ -4,10 +4,13 @@ function ValidacaoUsuario(inputName, inputLastName, inputEmail, inputPass, confi
     console.log(inputEmail);
     console.log(inputPass);
     console.log(confirmPass);
+
+    if(inputName.value != "" && inputLastName.value != "" && inputEmail.value != "" && inputPass.value != "" && confirmPass != "") {
+        return true;
+    }else{
+        return false;
+    }
 }
 
-if(inputName.value != "" && inputLastName.value != "" && inputEmail.value != "" && inputPass.value != "" && confirmPass != "") {
-    return true;
-}else{
-    return false;
-}
+    const inputName = document.querySelector('#idNm');
+
