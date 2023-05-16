@@ -43,7 +43,7 @@ function ValidacaoUsuario(inputName, inputLastName, inputEmail, inputPass, confi
 
     inputEmail.addEventListener("keyup",()=>{
 
-    if(inputEmail.value.length <10){
+    if(inputEmail.value.length <6){
         inputEmail.setAttribute("style", "color:#00CC00");
     }
     else{
@@ -55,20 +55,15 @@ function ValidacaoUsuario(inputName, inputLastName, inputEmail, inputPass, confi
 
     if(inputPass.value.length <6){
         inputPass.setAttribute("style", "color:#00CC00");
+    } else if(inputPass.value.length > 8){
+        alert('Senha inválida, exedeu a quantidade caracteres')
     }
     else{
         inputPass.setAttribute("style", "color:#990000")
     }
   });
 
-      confirmPass.addEventListener("keyup",()=>{
+      
 
-    if(confirmPass.value.length <6){
-        confirmPass.setAttribute("style", "color:#00CC00");
-    }
-    else{
-        confirmPass.setAttribute("style", "color:#990000")
-    }
-  });
 
 
