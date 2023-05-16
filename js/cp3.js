@@ -61,6 +61,14 @@ function ValidacaoUsuario(inputName, inputLastName, inputEmail, inputPass, confi
     }
   });
 
+      confirmPass.addEventListener("keyup",()=>{
 
+    if(confirmPass.value.length <6){
+        confirmPass.setAttribute("style", "color:#00CC00");
+    }
+    else{
+        confirmPass.setAttribute("style", "color:#990000")
+    }
+  });
 
 
