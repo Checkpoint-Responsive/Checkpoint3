@@ -30,3 +30,14 @@ function ValidacaoUsuario(inputName, inputLastName, inputEmail, inputPass, confi
         labelName.setAttribute("style", "color:#990000")
     }
   });
+
+      inputLastName.addEventListener("keyup",()=>{
+
+    if(inputLastName.value.length <5){
+        inputLastName.setAttribute("style", "color:#00CC00");
+    }
+    else{
+        inputLastName.setAttribute("style", "color:#990000")
+    }
+  });
+
