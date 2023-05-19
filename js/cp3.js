@@ -10,6 +10,20 @@ const labelEmail = document.querySelector("label[for='idEmail']");
 const labelPassword = document.querySelector("label[for='idPassword']");
 const labelConfirmPassword= document.querySelector("label[for='idConfirmPassword']");
 
+const darkModeButton = document.getElementById("dark")
+
+const body = document.querySelector(".darkMode1")
+const textH1 = document.querySelector(".darkMode21")
+const textP =  document.querySelector(".darkMode22")
+const textLeg = document.querySelector(".darkMode23")
+const textLabel1 = document.querySelector(".darkMode24")
+const textLabel2 = document.querySelector(".darkMode25")
+const textLabel3 = document.querySelector(".darkMode26")
+const textLabel4 = document.querySelector(".darkMode27")
+const textLabel5 = document.querySelector(".darkMode28")
+const form = document.querySelector(".darkMode3")
+
+
 const submitButton = document.getElementById("btnSubmit");
 
 const greenColor = "color:#00CC00";
@@ -126,5 +140,21 @@ function confirmPasswordValidation(){
 }
 
 inputConfirmPassword.addEventListener("keyup", () => confirmPasswordValidation());
+
+darkModeButton.addEventListener("click", () => {
+
+    
+    body.classList.toggle("darkBack")
+    form.classList.toggle("darkForm")
+    textH1.classList.toggle("darkText")
+    textP.classList.toggle("darkText")
+    textLeg.classList.toggle("darkText")
+    textLabel1.classList.toggle("darkText")
+    textLabel2.classList.toggle("darkText")
+    textLabel3.classList.toggle("darkText")
+    textLabel4.classList.toggle("darkText")
+    textLabel5.classList.toggle("darkText")
+
+})
 
 submitButton.addEventListener("click", tryValidate);
