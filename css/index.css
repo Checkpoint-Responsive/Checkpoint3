@@ -140,3 +140,20 @@ fieldset div input{
 
     color: #6c6a71;
 }
+
+fieldset div button{
+    border: none;
+    background: none;
+    width: 10rem;
+    height: 5.6rem;
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    color: #FFFFFF;
+    background: #04D361;
+    border-radius: 8px;
+    border: 0;
+    cursor: pointer;
+}
