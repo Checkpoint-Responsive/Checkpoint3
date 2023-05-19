@@ -99,3 +99,11 @@ fieldset label{
     margin-top: 2.44rem;
 }
 
+fieldset h5{
+    margin-left: 1.2rem;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    color: #574e6d;
+
+    width: 20rem;
+}
