@@ -21,3 +21,42 @@ body, input, button, select, textarea{
     font-family: 'Poppins', sans-serif;
 
 }
+
+
+body{
+    background: #E5E5E5;
+}
+
+
+
+.hero{
+    width: 73.6rem;
+    margin: 0 auto;
+}
+
+header{
+    display: flex;
+}
+
+header p{
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    color: black;
+}
+
+header button{
+    border: none;
+    background: none;
+    width: 2rem;
+    height: 5.6rem;
+    font-family: 'Archivo';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    color: #FFFFFF;
+    background: #04D361;
+    border-radius: 8px;
+    border: 0;
+    cursor: pointer;
+}
