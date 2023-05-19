@@ -90,3 +90,12 @@ fieldset{
     flex-direction: column;
     gap: 3rem;
 }
+
+fieldset label{
+    font-size: 1.4rem;
+    line-height: 2.44rem;
+    color: #4E4958;
+    margin-bottom: 0.8rem;
+    margin-top: 2.44rem;
+}
+
