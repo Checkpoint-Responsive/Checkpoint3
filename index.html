@@ -5,60 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="./css/index.css">
     <script src="./js/cp3.js" defer></script>
+
+
+    
     <title>Formulário de acesso</title>
 </head>
-<body>
+<body class="darkMode1" >
+    <div class="hero" >
 
-        <h1>Formulário de cadastro</h1>
-
-        <div>
-            <button>Dark mode</button>
-        </div>
-
-        <p></p>
+        <header >
+            <div class="header ">
+                <h1 class="darkMode21">Formulário de cadastro</h1>
+    
+                    <p class="darkMode22">Este é um formulário de envio de cadastro feito pela turma 1TDSPM</p>
+            </div>
+    
+            <div>
+                <button id="dark"><img src="/images/darkmode.svg" alt="Imagem de lua para modo noturno"></button>
+            </div>
+        </header>
 
     <div>
-        <form name="frm01" method="get">
+        <form name="frm01" method="get" class=" darkMode3"> 
 
             <input type="hidden" name="txtOculto" value="ValorOculto">
 
             <fieldset>
 
-                <legend>Entrar</legend>
+                <legend class=" darkMode23">Entrar</legend>
 
                 <div>
-                    <label for="idName">Primeiro nome:</label>
-                    <input type="text" name="txtName" id="idName" placeholder="Nome">
+                    <label class=" darkMode24" for="idName">Primeiro nome:</label>
+                    <input  type="text" name="txtName" id="idName" placeholder="Nome">
                     <h5>Validação: Mínimo de 5 caracteres digitados. <p></p>(este campo não pode estar vazio).</h5>
                 </div>
 
                 <div>
-                    <label for="idLastName">Último nome:</label>
+                    <label class="darkMode25" for="idLastName">Último nome:</label>
                     <input type="text" name="txtLastName" id="idLastName" placeholder="Último nome">
                     <H5>Validação: Mínimo de 5 caracteres digitados. <p></p>
                         (este campo não pode estar vazio).</H5>
                 </div>
 
                 <div>
-                    <label for="idEmail">Email:</label>
+                    <label class=" darkMode26" for="idEmail">Email:</label>
                     <input type="text" name="txtEmail" id="idEmail" placeholder="Email">
                     <H5>Validação: Mínimo de 5 caracteres digitados e uso do "@" obrigatório. <p></p>
                         (este campo não pode estar vazio).</H5>
                 </div>
                 <div>
-                    <label for="idPassword">Senha:</label>
+                    <label class=" darkMode27" for="idPassword">Senha:</label>
                     <input type="password" name="txtPassword" id="idPassword" placeholder="Senha">
                     <H5>Validação: Mínimo de 6 e máximo de 8 caracteres digitados. <p></p>(este campo não pode estar vazio).</H5>
                 </div>
 
                 <div>
-                    <label for="idConfirmPassword">Confirmar senha:</label>
+                    <label class="darkMode28" for="idConfirmPassword">Confirmar senha:</label>
                     <input type="password" name="txtConfirmPassword" id="idConfirmPassword" placeholder="Senha">
                     <h5>Validação: Comparar com a senha para garantir que seja igual.</h5>
                 </div>
-
-                <p></p>
 
                 <div>
                     <button type="submit" id="btnSubmit">Continuar</button>
@@ -67,6 +79,7 @@
 
             </fieldset>
         </form>
+    </div>
     </div>
 </body>
 </html>
