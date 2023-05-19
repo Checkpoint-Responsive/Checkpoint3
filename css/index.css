@@ -157,3 +157,16 @@ fieldset div button{
     border: 0;
     cursor: pointer;
 }
+
+.darkBack{
+    background-color: #121214;
+}
+
+.darkForm{
+    background-color: #2f2f35;
+
+}
+
+.darkText{
+    color: #e91e63;
+}
